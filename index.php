@@ -16,7 +16,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 	),
 	false
 );?>
-<h3>Наши услуги</h3>
+<h3>Наши услуги!</h3>
 <?$APPLICATION->IncludeComponent("bitrix:furniture.catalog.index", "", array(
 	"IBLOCK_TYPE" => "products",
 	"IBLOCK_ID" => "3",
