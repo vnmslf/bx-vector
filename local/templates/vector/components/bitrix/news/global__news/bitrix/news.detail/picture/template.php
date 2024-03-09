@@ -12,7 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<picture>
+<picture class="detail">
 <?foreach ($arResult['PP'] as $keyMedia => $valueMedia) {
 	if($keyMedia !== 'default') {
 		$explode = explode('-', $keyMedia);
