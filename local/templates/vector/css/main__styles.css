@@ -650,6 +650,10 @@ footer {
         -ms-flex-direction: column;
         flex-direction: column;
         gap: 6px; }
+      footer.dark-footer .container .end__footer {
+        width: 100%;
+        padding-top: 25px;
+        text-align: center; }
 
 /*=================================================================*/
 /*                      THEME ELEMENTS

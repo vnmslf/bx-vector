@@ -9,7 +9,7 @@ IncludeTemplateLangFile(__FILE__);?>
 		'ALLOW_MULTI_SELECT' => 'N',
 		'CHILD_MENU_TYPE' => 'left',
 		'DELAY' => 'N',
-		'MAX_LEVEL' => '4',
+		'MAX_LEVEL' => '1',
 		'MENU_CACHE_GET_VARS' => array(
 			0 => '',
 		),
