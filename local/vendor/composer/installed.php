@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '3edf2e84e51e1e870387b2fe14cd23b285ff6be9',
+        'reference' => 'cd13b95407bbe33586df6a4261df83c7be52432d',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '3edf2e84e51e1e870387b2fe14cd23b285ff6be9',
+            'reference' => 'cd13b95407bbe33586df6a4261df83c7be52432d',
             'dev_requirement' => false,
         ),
         'akh/typograf' => array(
