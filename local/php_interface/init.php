@@ -156,7 +156,6 @@ function createWebp(&$arFields) {
 	// all picture properties
 	$newPicturesProps = [];
 	$res = \CIBlockElement::GetProperty($arFields['IBLOCK_ID'], $arFields['ID'], array("sort" => "asc"), Array());
-	$v360Images = [];
 	while ($ob = $res->GetNext()) {
 		if ($ob['PROPERTY_TYPE'] == 'F' && $ob['VALUE']) {
 			$defaultImgUrl = \CFile::GetPath($ob['VALUE']);

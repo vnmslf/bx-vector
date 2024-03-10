@@ -160,7 +160,9 @@ IncludeTemplateLangFile(__FILE__);?>
 		);?>
 		<footer class="text-center mt-auto">
 			<div class="container">
-				<span class="copyright">© <?=date('Y')?> ООО &laquo;Вектор тепла&raquo;</span>
+				<div class="end__footer">
+					2023 &mdash; <?=date('Y')?> © Все&nbsp;права&nbsp;защищены&nbsp;ООО&nbsp;&laquo;Вектор&nbsp;тепла&raquo;.
+				</div>
 			</div>
 		</footer>
 	</div>
