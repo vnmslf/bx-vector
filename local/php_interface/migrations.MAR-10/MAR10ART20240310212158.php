@@ -3,7 +3,7 @@
 namespace Sprint\Migration;
 
 
-class MAR1020240310211501 extends Version
+class MAR10ART20240310212158 extends Version
 {
     protected $description = "";
 
