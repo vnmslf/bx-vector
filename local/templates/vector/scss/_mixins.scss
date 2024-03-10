@@ -149,6 +149,11 @@
 
 /* default transitions */
 @mixin default-transition() {
-	-webkit-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+@mixin half-second-transition() {
+	-webkit-transition: all .5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
