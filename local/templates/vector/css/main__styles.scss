@@ -714,6 +714,16 @@ footer {
 				padding-top: 25px;
 				text-align: center;
 			}
+			@include media-down(medium) {
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: column;
+				        flex-direction: column;
+				gap: 22px;
+				.footer__block {
+					gap: 8px;
+				}
+			}
 		}
 	}
 }

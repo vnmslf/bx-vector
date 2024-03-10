@@ -91,6 +91,9 @@
 			margin: 0 0 50px;
 			-webkit-transition-delay: 1s;
 					transition-delay: 1s;
+			.end__footer {
+				color: $white;
+			}
 		}
 		.vertical-menu li {
 			opacity: 1;
@@ -254,6 +257,81 @@
 					&:after {
 						width: 100%;
 						height: 3px;
+					}
+				}
+			}
+		}
+	}
+	@include media-down(large) {
+		&.opened {
+			&:after {
+			}
+			.navbar {
+			}
+			footer {
+			}
+			.vertical-menu li {
+				&:nth-child(1n) {
+				}
+				&:nth-child(2n) {
+				}
+				&:nth-child(3n) {
+				}
+				&:nth-child(4n) {
+				}
+				&:nth-child(5n) {
+				}
+				&:nth-child(6n) {
+				}
+				&:nth-child(7n) {
+				}
+				&:nth-child(8n) {
+				}
+				&:nth-child(9n) {
+				}
+				&:nth-child(10n) {
+				}
+			}
+		}
+		&:after {
+		}
+		.navbar {
+		}
+		.close-icon {
+		}
+		footer {
+		}
+		.vertical-menu {
+			li {
+				.openmenu {
+					& > a {
+					}
+					& > .switch {
+					}
+				}
+				.switch {
+				}
+				a {
+					font-size: 30px;
+					&:after {
+					}
+					&:hover {
+						&:after {
+						}
+					}
+					&:hover {
+					}
+				}
+			}
+		}
+		.submenu {
+			li {
+				a {
+					&:after {
+					}
+					&:hover {
+						&:after {
+						}
 					}
 				}
 			}
