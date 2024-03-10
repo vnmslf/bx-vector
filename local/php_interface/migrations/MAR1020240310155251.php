@@ -3,7 +3,7 @@
 namespace Sprint\Migration;
 
 
-class MAR9_220240309231712 extends Version
+class MAR1020240310155251 extends Version
 {
     protected $description = "";
 
@@ -17,7 +17,7 @@ class MAR9_220240309231712 extends Version
     {
         $helper = $this->getHelperManager();
         $helper->Iblock()->saveIblockType(array (
-  'ID' => 'Articles',
+  'ID' => 'Services',
   'SECTIONS' => 'Y',
   'EDIT_FILE_BEFORE' => '',
   'EDIT_FILE_AFTER' => '',
@@ -27,35 +27,35 @@ class MAR9_220240309231712 extends Version
   array (
     'ru' => 
     array (
-      'NAME' => 'Статьи',
+      'NAME' => 'Услуги',
       'SECTION_NAME' => '',
       'ELEMENT_NAME' => '',
     ),
     'en' => 
     array (
-      'NAME' => 'Articles',
+      'NAME' => 'Services',
       'SECTION_NAME' => '',
       'ELEMENT_NAME' => '',
     ),
   ),
 ));
         $iblockId = $helper->Iblock()->saveIblock(array (
-  'IBLOCK_TYPE_ID' => 'Articles',
+  'IBLOCK_TYPE_ID' => 'Services',
   'LID' => 
   array (
     0 => 's1',
   ),
-  'CODE' => 'articles',
-  'API_CODE' => 'articles',
+  'CODE' => 'services',
+  'API_CODE' => 'services',
   'REST_ON' => 'N',
-  'NAME' => 'Статьи',
+  'NAME' => 'Услуги',
   'ACTIVE' => 'Y',
-  'SORT' => '500',
+  'SORT' => '1',
   'LIST_PAGE_URL' => '#SITE_DIR#/#IBLOCK_CODE#/',
   'DETAIL_PAGE_URL' => '#SITE_DIR#/#IBLOCK_CODE#/#SECTION_CODE_PATH#/#ELEMENT_CODE#/',
   'SECTION_PAGE_URL' => '#SITE_DIR#/#IBLOCK_CODE#/#SECTION_CODE_PATH#/',
   'CANONICAL_PAGE_URL' => '#SITE_DIR#/#IBLOCK_CODE#/#SECTION_CODE_PATH#/#ELEMENT_CODE#/',
-  'PICTURE' => NULL,
+  'PICTURE' => '68',
   'DESCRIPTION' => '',
   'DESCRIPTION_TYPE' => 'text',
   'RSS_TTL' => '24',
@@ -423,7 +423,7 @@ class MAR9_220240309231712 extends Version
   'IS_REQUIRED' => 'N',
   'VERSION' => '1',
   'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => NULL,
+  'USER_TYPE_SETTINGS' => 'a:0:{}',
   'HINT' => '',
 ));
             $helper->Iblock()->saveProperty($iblockId, array (
@@ -447,7 +447,7 @@ class MAR9_220240309231712 extends Version
   'IS_REQUIRED' => 'N',
   'VERSION' => '1',
   'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => NULL,
+  'USER_TYPE_SETTINGS' => 'a:0:{}',
   'HINT' => '',
 ));
             $helper->Iblock()->saveProperty($iblockId, array (
@@ -471,7 +471,7 @@ class MAR9_220240309231712 extends Version
   'IS_REQUIRED' => 'N',
   'VERSION' => '1',
   'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => NULL,
+  'USER_TYPE_SETTINGS' => 'a:0:{}',
   'HINT' => '',
 ));
             $helper->Iblock()->saveProperty($iblockId, array (
@@ -495,7 +495,7 @@ class MAR9_220240309231712 extends Version
   'IS_REQUIRED' => 'N',
   'VERSION' => '1',
   'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => NULL,
+  'USER_TYPE_SETTINGS' => 'a:0:{}',
   'HINT' => '',
 ));
             $helper->Iblock()->saveProperty($iblockId, array (
@@ -519,7 +519,7 @@ class MAR9_220240309231712 extends Version
   'IS_REQUIRED' => 'N',
   'VERSION' => '1',
   'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => NULL,
+  'USER_TYPE_SETTINGS' => 'a:0:{}',
   'HINT' => '',
 ));
             $helper->Iblock()->saveProperty($iblockId, array (
@@ -543,7 +543,7 @@ class MAR9_220240309231712 extends Version
   'IS_REQUIRED' => 'N',
   'VERSION' => '1',
   'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => NULL,
+  'USER_TYPE_SETTINGS' => 'a:0:{}',
   'HINT' => '',
 ));
             $helper->Iblock()->saveProperty($iblockId, array (
@@ -567,7 +567,7 @@ class MAR9_220240309231712 extends Version
   'IS_REQUIRED' => 'N',
   'VERSION' => '1',
   'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => NULL,
+  'USER_TYPE_SETTINGS' => 'a:0:{}',
   'HINT' => '',
 ));
             $helper->Iblock()->saveProperty($iblockId, array (
@@ -591,7 +591,7 @@ class MAR9_220240309231712 extends Version
   'IS_REQUIRED' => 'N',
   'VERSION' => '1',
   'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => NULL,
+  'USER_TYPE_SETTINGS' => 'a:0:{}',
   'HINT' => '',
 ));
             $helper->Iblock()->saveProperty($iblockId, array (
@@ -615,7 +615,7 @@ class MAR9_220240309231712 extends Version
   'IS_REQUIRED' => 'N',
   'VERSION' => '1',
   'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => NULL,
+  'USER_TYPE_SETTINGS' => 'a:0:{}',
   'HINT' => '',
 ));
             $helper->Iblock()->saveProperty($iblockId, array (
@@ -639,7 +639,7 @@ class MAR9_220240309231712 extends Version
   'IS_REQUIRED' => 'N',
   'VERSION' => '1',
   'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => NULL,
+  'USER_TYPE_SETTINGS' => 'a:0:{}',
   'HINT' => '',
 ));
             $helper->Iblock()->saveProperty($iblockId, array (
@@ -663,7 +663,7 @@ class MAR9_220240309231712 extends Version
   'IS_REQUIRED' => 'N',
   'VERSION' => '1',
   'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => NULL,
+  'USER_TYPE_SETTINGS' => 'a:0:{}',
   'HINT' => '',
 ));
             $helper->Iblock()->saveProperty($iblockId, array (
@@ -687,7 +687,7 @@ class MAR9_220240309231712 extends Version
   'IS_REQUIRED' => 'N',
   'VERSION' => '1',
   'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => NULL,
+  'USER_TYPE_SETTINGS' => 'a:0:{}',
   'HINT' => '',
 ));
         $helper->UserOptions()->saveElementGrid($iblockId, array (
@@ -697,7 +697,10 @@ class MAR9_220240309231712 extends Version
     array (
       'columns' => 
       array (
-        0 => '',
+        0 => 'NAME',
+        1 => 'ACTIVE',
+        2 => 'SORT',
+        3 => 'ID',
       ),
       'columns_sizes' => 
       array (
