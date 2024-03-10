@@ -3,7 +3,7 @@
 namespace Sprint\Migration;
 
 
-class MAR1020240310211517 extends Version
+class MAR10ART20240310212235 extends Version
 {
     protected $description = "";
 
@@ -18,13 +18,33 @@ class MAR1020240310211517 extends Version
         $helper = $this->getHelperManager();
 
         $iblockId = $helper->Iblock()->getIblockIdIfExists(
-            'services',
-            'Services'
+            'articles',
+            'Articles'
         );
 
         $helper->Iblock()->addSectionsFromTree(
             $iblockId,
             array (
+  0 => 
+  array (
+    'NAME' => 'Общие статьи',
+    'CODE' => 'about-all',
+    'SORT' => '500',
+    'ACTIVE' => 'Y',
+    'XML_ID' => NULL,
+    'DESCRIPTION' => '',
+    'DESCRIPTION_TYPE' => 'html',
+  ),
+  1 => 
+  array (
+    'NAME' => 'Детально',
+    'CODE' => 'detalno',
+    'SORT' => '500',
+    'ACTIVE' => 'Y',
+    'XML_ID' => NULL,
+    'DESCRIPTION' => '',
+    'DESCRIPTION_TYPE' => 'html',
+  ),
 )        );
     }
 

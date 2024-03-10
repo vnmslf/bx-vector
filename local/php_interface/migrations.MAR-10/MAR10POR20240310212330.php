@@ -2,7 +2,7 @@
 
 namespace Sprint\Migration;
 
-class MAR1020240310211526 extends Version
+class MAR10POR20240310212330 extends Version
 {
     protected $description   = "";
     protected $moduleVersion = "4.6.2";
