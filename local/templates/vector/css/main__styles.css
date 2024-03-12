@@ -79,36 +79,63 @@ h1, h2, h3, h4, h5, h6 {
   margin: 20px 0; }
 
 h1 {
-  font-size: 36px; }
+  font-size: 24px; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 28px; } }
+  @media (min-width: 1280px) {
+    h1 {
+      font-size: 36px; } }
 
 h2 {
-  font-size: 28px; }
+  font-size: 20px; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 24px; } }
+  @media (min-width: 1280px) {
+    h2 {
+      font-size: 28px; } }
 
 h3 {
-  font-size: 24px; }
+  font-size: 20px; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 22px; } }
+  @media (min-width: 1280px) {
+    h3 {
+      font-size: 24px; } }
 
 h4 {
-  font-size: 20px; }
+  font-size: 18px; }
+  @media (min-width: 768px) {
+    h4 {
+      font-size: 20px; } }
 
 h5 {
-  font-size: 18px; }
+  font-size: 16px; }
+  @media (min-width: 768px) {
+    h5 {
+      font-size: 18px; } }
 
 h6 {
-  font-size: 16px; }
+  font-size: 14px; }
+  @media (min-width: 768px) {
+    h6 {
+      font-size: 16px; } }
 
 a {
   color: rgba(0, 0, 0, 0.9);
   outline: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
   a * {
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out; }
   a:hover {
     color: #ca4e5d;
     text-decoration: none;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out; }
   a:focus {
     outline: 0; }
 
