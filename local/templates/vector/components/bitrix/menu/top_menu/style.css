@@ -12,15 +12,13 @@
 /* flex mixes*/
 /* default transitions */
 /* shadows */
-.navbar {
-  padding: 30px 0; }
-  .navbar .navbar-brand {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 0;
-    max-width: 90px; }
-    .navbar .navbar-brand.navbar-light {
-      font-weight: 900; }
+.navbar .navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  max-width: 90px; }
+  .navbar .navbar-brand.navbar-light {
+    font-weight: 900; }
 
 .menu-icon {
   cursor: pointer;
@@ -247,5 +245,3 @@
   @media (max-width: 1023.98px) {
     .overlay-menu .vertical-menu li a {
       font-size: 26px; } }
-
-/*# sourceMappingURL=style.css.map */

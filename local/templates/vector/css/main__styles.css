@@ -11,6 +11,7 @@
 /* links*/
 /* flex mixes*/
 /* default transitions */
+/* shadows */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i|Roboto:400,400i,500,500i,700,700i,900,900i");
 /*=================================================================*/
 /*                      BASE
@@ -53,6 +54,9 @@ img {
   color: #FFF;
   background: rgba(0, 0, 0, 0.9);
   /* Gecko Browsers */ }
+
+.theme-color {
+  color: #ca4e5d; }
 
 #cursor {
   display: none;
@@ -304,6 +308,18 @@ pre {
       text-decoration: none; }
       .prenav .container a:hover {
         color: #000; }
+
+/*=================================================================*/
+/*                      NAVBAR
+/*=================================================================*/
+.navbar {
+  padding: 10px 0; }
+  @media (min-width: 600px) {
+    .navbar {
+      padding: 20px 0; } }
+  @media (min-width: 1024px) {
+    .navbar {
+      padding: 30px 0; } }
 
 /* Loader */
 .loader {
