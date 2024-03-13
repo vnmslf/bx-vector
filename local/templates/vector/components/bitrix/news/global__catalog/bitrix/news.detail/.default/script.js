@@ -17,10 +17,12 @@ $('body').on('click', '.prop__button', function() {
 	$(this).addClass('active');
 	diameterIndex = container.find('.prop__block[data-input="diameter"]').find('.prop__button.active').attr('data-index');
 	table.find('.product__row').each(function() {
-		if($(this).find('.product__value').attr('data-output') !== 'mass') {
-			$(this).find('.product__value').text(updateTechnicalTable(container, $(this)));
-		} else {
-			$(this).find('.product__value').text(updateWeightRow(container, $(this), diameterIndex));
+		if($(this).find('.product__value').attr('data-output') !== 'none') {
+			if($(this).find('.product__value').attr('data-output') !== 'mass') {
+				$(this).find('.product__value').text(updateTechnicalTable(container, $(this)));
+			} else {
+				$(this).find('.product__value').text(updateWeightRow(container, $(this), diameterIndex));
+			}
 		}
 	})
 })

@@ -71,7 +71,6 @@ section.product {
 							&.active {
 								@include default-btn($red);
 								@include btn-small();
-								font-weight: 700;
 								&:hover {
 									@include btn-color-default($red);
 								}
@@ -80,6 +79,21 @@ section.product {
 								@include outline-btn($red);
 								@include btn-small();
 								color: $black;
+							}
+						}
+					}
+				}
+				&.width__unset {
+					.prop__line {
+						.prop__container {
+							span {
+								width: auto;
+								&.active {
+									&:hover {
+									}
+								}
+								&:not(.active) {
+								}
 							}
 						}
 					}
@@ -165,6 +179,20 @@ section.product {
 							}
 						}
 					}
+					&.width__unset {
+						.prop__line {
+							.prop__container {
+								span {
+									&.active {
+										&:hover {
+										}
+									}
+									&:not(.active) {
+									}
+								}
+							}
+						}
+					}
 				}
 				.technical {
 				}
@@ -215,6 +243,20 @@ section.product {
 									}
 								}
 								&:not(.active) {
+								}
+							}
+						}
+					}
+					&.width__unset {
+						.prop__line {
+							.prop__container {
+								span {
+									&.active {
+										&:hover {
+										}
+									}
+									&:not(.active) {
+									}
 								}
 							}
 						}
@@ -270,6 +312,20 @@ section.product {
 								}
 								&:not(.active) {
 									font-size: 14px;
+								}
+							}
+						}
+					}
+					&.width__unset {
+						.prop__line {
+							.prop__container {
+								span {
+									&.active {
+										&:hover {
+										}
+									}
+									&:not(.active) {
+									}
 								}
 							}
 						}
@@ -345,6 +401,20 @@ section.product {
 							}
 						}
 					}
+					&.width__unset {
+						.prop__line {
+							.prop__container {
+								span {
+									&.active {
+										&:hover {
+										}
+									}
+									&:not(.active) {
+									}
+								}
+							}
+						}
+					}
 				}
 				.technical {
 				}
@@ -409,6 +479,20 @@ section.product {
 							}
 						}
 					}
+					&.width__unset {
+						.prop__line {
+							.prop__container {
+								span {
+									&.active {
+										&:hover {
+										}
+									}
+									&:not(.active) {
+									}
+								}
+							}
+						}
+					}
 				}
 				.technical {
 				}
@@ -457,6 +541,20 @@ section.product {
 									}
 								}
 								&:not(.active) {
+								}
+							}
+						}
+					}
+					&.width__unset {
+						.prop__line {
+							.prop__container {
+								span {
+									&.active {
+										&:hover {
+										}
+									}
+									&:not(.active) {
+									}
 								}
 							}
 						}
@@ -520,6 +618,20 @@ section.product {
 							}
 						}
 					}
+					&.width__unset {
+						.prop__line {
+							.prop__container {
+								span {
+									&.active {
+										&:hover {
+										}
+									}
+									&:not(.active) {
+									}
+								}
+							}
+						}
+					}
 				}
 				.technical {
 				}
@@ -568,6 +680,20 @@ section.product {
 									}
 								}
 								&:not(.active) {
+								}
+							}
+						}
+					}
+					&.width__unset {
+						.prop__line {
+							.prop__container {
+								span {
+									&.active {
+										&:hover {
+										}
+									}
+									&:not(.active) {
+									}
 								}
 							}
 						}
@@ -624,6 +750,20 @@ section.product {
 							}
 						}
 					}
+					&.width__unset {
+						.prop__line {
+							.prop__container {
+								span {
+									&.active {
+										&:hover {
+										}
+									}
+									&:not(.active) {
+									}
+								}
+							}
+						}
+					}
 				}
 				.technical {
 				}
@@ -672,6 +812,20 @@ section.product {
 									}
 								}
 								&:not(.active) {
+								}
+							}
+						}
+					}
+					&.width__unset {
+						.prop__line {
+							.prop__container {
+								span {
+									&.active {
+										&:hover {
+										}
+									}
+									&:not(.active) {
+									}
 								}
 							}
 						}

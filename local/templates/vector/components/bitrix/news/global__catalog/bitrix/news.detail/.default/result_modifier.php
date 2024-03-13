@@ -23,7 +23,7 @@ $height_input = [
 if($arResult['PREVIEW_PICTURE']) {
 	$arResult['PP'] = make_picture_min($arResult['PREVIEW_PICTURE'], $height_input);
 }
-$hlblock__name = $arResult['PROPERTIES']['PROPS']['USER_TYPE_SETTINGS']['TABLE_NAME'];
+$hlblock__name = $arResult['PROPERTIES']['PROPS_ME']['USER_TYPE_SETTINGS']['TABLE_NAME'];
 $hlblock = \Bitrix\Highloadblock\HighloadBlockTable::getList(array('filter' => array('=TABLE_NAME' => $hlblock__name)))->fetch();
 $entity = \Bitrix\Highloadblock\HighloadBlockTable::compileEntity($hlblock);
 $entity_data_class = $entity->getDataClass();
@@ -32,14 +32,43 @@ $res = $entity_data_class::getList(array(
 	'filter' => array('=UF_XML_ID' => $arResult['ID'])
 ));
 if ($item = $res->Fetch()) {
-	$props['ARTICLE'] = $item['UF_ARTICLE'];
-	$props['DIAMETER'] = $item['UF_DIAMETER'];
-	$props['WEIGHT'] = $item['UF_WEIGHT'];
-	$props['MASS_ONE'] = $item['UF_MASS_ONE'];
-	$props['MASS_TWO'] = $item['UF_MASS_TWO'];
+	$props_me['ARTICLE'] = $item['UF_ARTICLE'];
+	$props_me['DIAMETER'] = $item['UF_DIAMETER'];
+	$props_me['WEIGHT'] = $item['UF_WEIGHT'];
+	$props_me['MASS_ONE'] = $item['UF_MASS_ONE'];
+	$props_me['MASS_TWO'] = $item['UF_MASS_TWO'];
 }
-$default__article = str_replace('{D}', $props['DIAMETER'][0], $props['ARTICLE']);
-$default__article = str_replace('{W}', ((str_replace(',', '.', $props['WEIGHT'][0])) * 10), $default__article);
-$arResult['PROPS'] = $props;
-$arResult['DEFAULT_ARTICLE'] = $default__article;
+if($props_me) {
+	if($props['ARTICLE']) {
+		$default__article = str_replace('{D}', $props_me['DIAMETER'][0], $props_me['ARTICLE']);
+		$default__article = str_replace('{W}', ((str_replace(',', '.', $props_me['WEIGHT'][0])) * 10), $default__article);
+		$arResult['DEFAULT_ARTICLE'] = $default__article;
+	}
+	$arResult['PROPS_ME'] = $props_me;
+}
+
+$hlblock__name = $arResult['PROPERTIES']['PROPS_VR']['USER_TYPE_SETTINGS']['TABLE_NAME'];
+$hlblock = \Bitrix\Highloadblock\HighloadBlockTable::getList(array('filter' => array('=TABLE_NAME' => $hlblock__name)))->fetch();
+$entity = \Bitrix\Highloadblock\HighloadBlockTable::compileEntity($hlblock);
+$entity_data_class = $entity->getDataClass();
+$res = $entity_data_class::getList(array(
+	'select' => array('ID', 'UF_COLOR', 'UF_WIDTH', 'UF_WIDTH_TWO', 'UF_HEIGHT', 'UF_DEPTH', 'UF_WEIGHT'),
+	'filter' => array('=UF_XML_ID' => $arResult['ID'])
+));
+if ($item = $res->Fetch()) {
+	$props_vr['COLOR'] = $item['UF_COLOR'];
+	$props_vr['WIDTH'] = array_unique($item['UF_WIDTH']);
+	$props_vr['WIDTH_TWO'] = array_unique($item['UF_WIDTH_TWO']);
+	$props_vr['HEIGHT'] = array_unique($item['UF_HEIGHT']);
+	$props_vr['DEPTH'] = array_unique($item['UF_DEPTH']);
+	$props_vr['WEIGHT'] = $item['UF_WEIGHT'];
+}
+if($props_vr) {
+	/*if($props['ARTICLE']) {
+		$default__article = str_replace('{D}', $props_vr['DIAMETER'][0], $props_vr['ARTICLE']);
+		$default__article = str_replace('{W}', ((str_replace(',', '.', $props_vr['WEIGHT'][0])) * 10), $default__article);
+		$arResult['DEFAULT_ARTICLE'] = $default__article;
+	}*/
+	$arResult['PROPS_VR'] = $props_vr;
+}
 ?>

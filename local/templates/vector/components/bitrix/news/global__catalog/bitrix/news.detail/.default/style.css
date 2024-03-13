@@ -92,8 +92,7 @@ section.product .container {
             color: #fff;
             border-radius: 4px;
             font-size: 13px;
-            padding: 6px 12px;
-            font-weight: 700; }
+            padding: 6px 12px; }
             section.product .container .product__right .prop__block .prop__line .prop__container span.active:hover,
             section.product .container .product__right .prop__block .prop__line .prop__container span.active .active {
               /*@include btn();*/
@@ -132,6 +131,8 @@ section.product .container {
               background-color: #ca4e5d;
               border-color: #ca4e5d;
               color: #fff; }
+    section.product .container .product__right .prop__block.width__unset .prop__line .prop__container span {
+      width: auto; }
     section.product .container .product__right .technical {
       display: none; }
   section.product .container .product__technical {
