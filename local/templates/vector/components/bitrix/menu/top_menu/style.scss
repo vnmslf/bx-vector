@@ -175,12 +175,44 @@
 	}
 	.vertical-menu {
 		list-style: none;
-		padding: 0;
+		padding: 0 24px;
 		margin: 0;
 		text-align: center;
 		width: 100%;
 		z-index: 6;
 		li {
+			padding: 4px 0;
+			position: relative;
+			list-style: none;
+			opacity: 0;
+			bottom: -10px;
+			-webkit-transition: all 0.2s ease-in-out;
+			transition: all 0.2s ease-in-out;
+			text-align: left;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+			-ms-flex-wrap: wrap;
+			    flex-wrap: wrap;
+			-webkit-box-pack: justify;
+			    -ms-flex-pack: justify;
+			        justify-content: space-between;
+			.switch {
+				display: inline-block;
+				padding: 0;
+				line-height: 1;
+				cursor: pointer;
+				color: $white;
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+				-webkit-transition: all 0.2s ease-in-out;
+				transition: all 0.2s ease-in-out;
+				-webkit-backface-visibility: hidden;
+			}
+			&.openmenu,
 			.openmenu {
 				& > a {
 					color: $white;
@@ -190,26 +222,6 @@
 					transform: rotate(45deg);
 				}
 			}
-			padding: 4px 0;
-			position: relative;
-			list-style: none;
-			opacity: 0;
-			bottom: -10px;
-			-webkit-transition: all 0.2s ease-in-out;
-			transition: all 0.2s ease-in-out;
-			.switch {
-				display: inline-block;
-				padding: 0 22px;
-				line-height: 1;
-				cursor: pointer;
-				color: $white;
-				position: absolute;
-				-webkit-transform: rotate(0deg);
-				transform: rotate(0deg);
-				-webkit-transition: all 0.2s ease-in-out;
-				transition: all 0.2s ease-in-out;
-				-webkit-backface-visibility: hidden;
-			}
 			a {
 				color: $white;
 				font-family: "Montserrat", sans-serif;
@@ -218,6 +230,9 @@
 				width: 100%;
 				text-decoration: none;
 				position: relative;
+				-webkit-box-flex: 0;
+				    -ms-flex: 0 0 calc(100% - 62px);
+				        flex: 0 0 calc(100% - 62px);
 				&:after {
 					content: '';
 					background: $white;
@@ -244,6 +259,13 @@
 	.submenu {
 		display: none;
 		padding: 0;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 0 100%;
+		        flex: 0 0 100%;
 		li {
 			a {
 				color: $white;
@@ -312,7 +334,7 @@
 				.switch {
 				}
 				a {
-					font-size: 30px;
+					font-size: 26px;
 					&:after {
 					}
 					&:hover {

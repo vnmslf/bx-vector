@@ -10,12 +10,15 @@ if (!empty($arResult)) {?>
 		<?}
 		if ($arItem['IS_PARENT']) {
 			if ($arItem['DEPTH_LEVEL'] == 1) {?>
-	<li<?if($arItem['SELECTED']) {?> class="selected"<?}?>>
+	<li class="hasChild<?if($arItem['SELECTED']) {?> selected<?}?>">
 		<a href='<?=$arItem['LINK']?>'><?=$arItem['TEXT']?></a>
+		<i class="fas fa-plus-square"></i>
+		<i class="fas fa-minus-square"></i>
 		<ul class="submenu">
 			<?} else {?>
-	<li<?if($arItem['SELECTED']) {?> class="selected"<?}?>>
+	<li class="hasChild<?if($arItem['SELECTED']) {?> selected<?}?>">
 		<a href='<?=$arItem['LINK']?>'><?=$arItem['TEXT']?></a>
+		<i class="fas fa-angle-right"></i>
 		<ul class="submenu">
 			<?}
 		} else {

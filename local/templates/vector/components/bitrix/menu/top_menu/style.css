@@ -11,6 +11,7 @@
 /* links*/
 /* flex mixes*/
 /* default transitions */
+/* shadows */
 .navbar {
   padding: 30px 0; }
   .navbar .navbar-brand {
@@ -153,7 +154,7 @@
     transition: all 0.3s ease-in-out; }
   .overlay-menu .vertical-menu {
     list-style: none;
-    padding: 0;
+    padding: 0 24px;
     margin: 0;
     text-align: center;
     width: 100%;
@@ -165,24 +166,37 @@
       opacity: 0;
       bottom: -10px;
       -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
-      .overlay-menu .vertical-menu li .openmenu > a {
-        color: #fff; }
-      .overlay-menu .vertical-menu li .openmenu > .switch {
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg); }
+      transition: all 0.2s ease-in-out;
+      text-align: left;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
       .overlay-menu .vertical-menu li .switch {
         display: inline-block;
-        padding: 0 22px;
+        padding: 0;
         line-height: 1;
         cursor: pointer;
         color: #fff;
-        position: absolute;
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
         -webkit-backface-visibility: hidden; }
+      .overlay-menu .vertical-menu li.openmenu > a,
+      .overlay-menu .vertical-menu li .openmenu > a {
+        color: #fff; }
+      .overlay-menu .vertical-menu li.openmenu > .switch,
+      .overlay-menu .vertical-menu li .openmenu > .switch {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg); }
       .overlay-menu .vertical-menu li a {
         color: #fff;
         font-family: "Montserrat", sans-serif;
@@ -190,7 +204,10 @@
         font-weight: 700;
         width: 100%;
         text-decoration: none;
-        position: relative; }
+        position: relative;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(100% - 62px);
+        flex: 0 0 calc(100% - 62px); }
         .overlay-menu .vertical-menu li a:after {
           content: '';
           background: #fff;
@@ -208,7 +225,14 @@
           color: #fff; }
   .overlay-menu .submenu {
     display: none;
-    padding: 0; }
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%; }
     .overlay-menu .submenu li a {
       color: #fff;
       font-size: 18px;
@@ -222,4 +246,6 @@
           height: 3px; }
   @media (max-width: 1023.98px) {
     .overlay-menu .vertical-menu li a {
-      font-size: 30px; } }
+      font-size: 26px; } }
+
+/*# sourceMappingURL=style.css.map */

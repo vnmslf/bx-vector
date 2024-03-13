@@ -138,7 +138,7 @@ $(function(){
     /*=========================================================================
             Main Menu
     =========================================================================*/
-    $( ".submenu" ).before( '<i class="fas fa-plus switch"></i>' );
+    $( ".vertical-menu .submenu" ).before( '<i class="fas fa-plus switch"></i>' );
 
     $(".vertical-menu li i.switch").on( 'click', function() {
         var $submenu = $(this).next(".submenu");

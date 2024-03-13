@@ -58,7 +58,7 @@ $APPLICATION->SetTitle('Каталог продукции');
 		'PREVIEW_TRUNCATE_LEN' => '',
 		'SEF_FOLDER' => '/catalog/',
 		'SEF_MODE' => 'Y',
-		'SEF_URL_TEMPLATES' => Array('detail'=>'#SECTION_CODE_PATH#/#ELEMENT_CODE#/','news'=>'','search'=>'','section'=>'#SECTION_CODE#/'),
+		'SEF_URL_TEMPLATES' => Array('detail'=>'#SECTION_CODE_PATH#/#ELEMENT_CODE#/','news'=>'','search'=>'','section'=>'#SECTION_CODE_PATH#/'),
 		'SET_LAST_MODIFIED' => 'Y',
 		'SET_STATUS_404' => 'N',
 		'SET_TITLE' => 'Y',
