@@ -51,6 +51,10 @@ img {
 	/* Gecko Browsers */
 }
 
+.theme-color {
+	color: $red;
+}
+
 #cursor {
 	display: none;
 	position: absolute;
@@ -326,6 +330,35 @@ pre {
 				color: $black;
 			}
 		}
+	}
+}
+
+/*=================================================================*/
+/*                      NAVBAR
+/*=================================================================*/
+.navbar {
+	padding: 10px 0;
+	@include media-up(smallest) {
+	}
+	@include media-up(small) {
+	}
+	@include media-up(xsmall) {
+		padding: 20px 0;
+	}
+	@include media-up(medium) {
+	}
+	@include media-up(xmedium) {
+	}
+	@include media-up(large) {
+		padding: 30px 0;
+	}
+	@include media-up(xlarge) {
+	}
+	@include media-up(xxlarge) {
+	}
+	@include media-up(prewide) {
+	}
+	@include media-up(wide) {
 	}
 }
 
