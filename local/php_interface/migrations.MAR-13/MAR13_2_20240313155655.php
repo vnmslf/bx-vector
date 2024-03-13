@@ -3,7 +3,7 @@
 namespace Sprint\Migration;
 
 
-class MAR13_620240313125325 extends Version
+class MAR13_2_20240313155655 extends Version
 {
     protected $description = "";
 
@@ -27,8 +27,8 @@ class MAR13_620240313125325 extends Version
             array (
   0 => 
   array (
-    'NAME' => 'Монтажные элементы',
-    'CODE' => 'montazhnye-elementy',
+    'NAME' => 'Дымоходы',
+    'CODE' => 'dymokhody',
     'SORT' => '500',
     'ACTIVE' => 'Y',
     'XML_ID' => NULL,
@@ -37,33 +37,36 @@ class MAR13_620240313125325 extends Version
   ),
   1 => 
   array (
-    'NAME' => 'Вентиляционные решетки',
-    'CODE' => 'ventilyatsionnye-reshetki',
+    'NAME' => 'Аксессуары для бани и камина',
+    'CODE' => 'aksessuary-dlya-bani-i-kamina',
     'SORT' => '500',
     'ACTIVE' => 'Y',
     'XML_ID' => NULL,
     'DESCRIPTION' => '',
     'DESCRIPTION_TYPE' => 'html',
-  ),
-  2 => 
-  array (
-    'NAME' => 'Сетки на трубу',
-    'CODE' => 'setki-na-trubu',
-    'SORT' => '500',
-    'ACTIVE' => 'Y',
-    'XML_ID' => NULL,
-    'DESCRIPTION' => '',
-    'DESCRIPTION_TYPE' => 'html',
-  ),
-  3 => 
-  array (
-    'NAME' => 'Решетки вентиляционные',
-    'CODE' => 'reshetki-ventilyatsionnye',
-    'SORT' => '500',
-    'ACTIVE' => 'Y',
-    'XML_ID' => NULL,
-    'DESCRIPTION' => '',
-    'DESCRIPTION_TYPE' => 'html',
+    'CHILDS' => 
+    array (
+      0 => 
+      array (
+        'NAME' => 'Сетки на трубу',
+        'CODE' => 'setki-na-trubu',
+        'SORT' => '500',
+        'ACTIVE' => 'N',
+        'XML_ID' => NULL,
+        'DESCRIPTION' => '',
+        'DESCRIPTION_TYPE' => 'html',
+      ),
+      1 => 
+      array (
+        'NAME' => 'Решетки вентиляционные',
+        'CODE' => 'reshetki-ventilyatsionnye',
+        'SORT' => '500',
+        'ACTIVE' => 'Y',
+        'XML_ID' => NULL,
+        'DESCRIPTION' => '',
+        'DESCRIPTION_TYPE' => 'html',
+      ),
+    ),
   ),
 )        );
     }
