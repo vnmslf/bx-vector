@@ -7,7 +7,7 @@ $APPLICATION->SetTitle('Дымоходные системы');
 	Array(
 		'AREA_FILE_SHOW' => 'file',
 		'PATH' => SITE_TEMPLATE_PATH.'/inc/caption.php',
-		'CAPTION' => 'Услуги &laquo;Вектор тепла&raquo;'
+		'CAPTION' => 'Каталог продукции'
 	)
 );?>
 <?$APPLICATION->IncludeComponent(
@@ -65,6 +65,25 @@ $APPLICATION->SetTitle('Дымоходные системы');
 		'SORT_ORDER1' => 'DESC',
 		'SORT_ORDER2' => 'ASC',
 		'STRICT_SECTION_CHECK' => 'N'
+	)
+);?>
+<?$APPLICATION->IncludeComponent(
+	'bitrix:main.include',
+	'',
+	Array(
+		'AREA_FILE_SHOW' => 'file',
+		'PATH' => SITE_TEMPLATE_PATH.'/inc/section__link.php',
+		'LINK_HREF' => '/catalog/',
+		'LINK_TEXT' => 'Весь каталог'
+	)
+);?>
+<?$APPLICATION->IncludeComponent(
+	'bitrix:main.include',
+	'',
+	Array(
+		'AREA_FILE_SHOW' => 'file',
+		'PATH' => SITE_TEMPLATE_PATH.'/inc/caption.php',
+		'CAPTION' => 'Услуги &laquo;Вектор тепла&raquo;'
 	)
 );?>
 <?$APPLICATION->IncludeComponent(
