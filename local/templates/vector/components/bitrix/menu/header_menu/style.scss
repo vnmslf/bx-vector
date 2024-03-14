@@ -19,98 +19,102 @@
 		}
 	}
 }
-.header__menu {
-	display: none;
-	&:not(.max-width__menu) {
-		width: 400px;
-	}
-	&.max-width__menu {
-		@include media-up(large) {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-orient: horizontal;
-			-webkit-box-direction: normal;
-			    -ms-flex-direction: row;
-			        flex-direction: row;
-			-webkit-box-pack: center;
-			    -ms-flex-pack: center;
-			        justify-content: center;
-			gap: 0px;
-			padding: 0;
-			margin: 0;
-			position: relative;
-			.floor__icon {
-				width: 25px;
-			}
-			li {
-				list-style: none;
-				a {
-					padding: 14px 22px;
-					font-weight: 600;
-					font-size: 1.1rem;
-					&.selected {
-						color: $red;
-						&:hover {
-							color: $black;
+header {
+	position: relative;
+	z-index: 3;
+	.header__menu {
+		display: none;
+		&:not(.max-width__menu) {
+			width: 400px;
+		}
+		&.max-width__menu {
+			@include media-up(large) {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: row;
+				        flex-direction: row;
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
+				gap: 0px;
+				padding: 0;
+				margin: 0;
+				position: relative;
+				.floor__icon {
+					width: 25px;
+				}
+				li {
+					list-style: none;
+					a {
+						padding: 14px 22px;
+						font-weight: 600;
+						font-size: 1.1rem;
+						&.selected {
+							color: $red;
+							&:hover {
+								color: $black;
+							}
 						}
 					}
-				}
-				.submenu {
-					opacity: 0;
-					position: absolute;
-					top: 48px;
-					left: 0;
-					padding: 0;
-					background: rgba($white, .3);
-					border: 1px solid $white;
-					-webkit-transform: translateY(-250%);
-					        transform: translateY(-250%);
-					@include default-transition();
-					display: -webkit-box;
-					display: -ms-flexbox;
-					display: flex;
-					-webkit-box-orient: vertical;
-					-webkit-box-direction: normal;
-					    -ms-flex-direction: column;
-					        flex-direction: column;
-					gap: 12px;
-					li {
-						a {
+					.submenu {
+						opacity: 0;
+						position: absolute;
+						top: 48px;
+						left: 0;
+						padding: 0;
+						background: rgba($white, .3);
+						border: 1px solid $white;
+						-webkit-transform: translateY(-250%);
+						        transform: translateY(-250%);
+						@include default-transition();
+						display: -webkit-box;
+						display: -ms-flexbox;
+						display: flex;
+						-webkit-box-orient: vertical;
+						-webkit-box-direction: normal;
+						    -ms-flex-direction: column;
+						        flex-direction: column;
+						gap: 12px;
+						li {
+							a {
+							}
 						}
 					}
-				}
-				&.hasChild {
-					i {
-						padding: 0 26px 0 0;
-					}
-					.fa-minus-square {
-						display: none;
-					}
-					&:hover {
-						.fa-plus-square {
-							display: none;
+					&.hasChild {
+						i {
+							padding: 0 26px 0 0;
 						}
 						.fa-minus-square {
-							display: inline-block;
-							color: $red;
+							display: none;
 						}
-						& > .submenu {
-							opacity: 1;
-							-webkit-transform: translateY(0);
-							        transform: translateY(0);
-							.hasChild {
-								position: relative;
-								.submenu {
-									top: 50%;
-									left: 74px;
-									-webkit-transform: translateY(-50%);
-									        transform: translateY(-50%);
-								}
-								&:hover {
+						&:hover {
+							.fa-plus-square {
+								display: none;
+							}
+							.fa-minus-square {
+								display: inline-block;
+								color: $red;
+							}
+							& > .submenu {
+								opacity: 1;
+								-webkit-transform: translateY(0);
+								        transform: translateY(0);
+								.hasChild {
+									position: relative;
 									.submenu {
-										-webkit-transform: translate(100%, -50%);
-										        transform: translate(100%, -50%);
+										top: 50%;
+										left: 74px;
+										-webkit-transform: translateY(-50%);
+										        transform: translateY(-50%);
+									}
+									&:hover {
+										.submenu {
+											-webkit-transform: translate(100%, -50%);
+											        transform: translate(100%, -50%);
+										}
 									}
 								}
 							}
@@ -118,18 +122,18 @@
 					}
 				}
 			}
-		}
-		& > .hasChild {
-			& > .submenu {
-				li {
-					&:last-child {
-						margin-bottom: 10px;
-					}
-					&.hasChild {
-						.submenu {
-							li {
-								&:last-child {
-									margin: 0;
+			& > .hasChild {
+				& > .submenu {
+					li {
+						&:last-child {
+							margin-bottom: 10px;
+						}
+						&.hasChild {
+							.submenu {
+								li {
+									&:last-child {
+										margin: 0;
+									}
 								}
 							}
 						}
