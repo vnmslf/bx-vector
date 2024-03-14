@@ -37,7 +37,7 @@ $APPLICATION->SetTitle('Каталог продукции');
 		'FILTER_NAME' => '',
 		'FILTER_PROPERTY_CODE' => array('',''),
 		'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-		'IBLOCK_ID' => '8',
+		'IBLOCK_ID' => \Dao\App::ib('catalog')->id(),
 		'IBLOCK_TYPE' => 'Catalog',
 		'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
 		'LIST_ACTIVE_DATE_FORMAT' => 'j F Y',

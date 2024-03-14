@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Tools\\' => array($baseDir . '/classes/Tools'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
+    'Dao\\' => array($baseDir . '/classes/Dao'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
     'Akh\\Typograf\\' => array($vendorDir . '/akh/typograf/src'),
 );

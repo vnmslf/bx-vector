@@ -15,6 +15,10 @@ class ComposerStaticInit2cce94128f809f1baf919c028edf545e
         array (
             'PHPMailer\\PHPMailer\\' => 20,
         ),
+        'D' => 
+        array (
+            'Dao\\' => 4,
+        ),
         'C' => 
         array (
             'Composer\\Installers\\' => 20,
@@ -33,6 +37,10 @@ class ComposerStaticInit2cce94128f809f1baf919c028edf545e
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'Dao\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/classes/Dao',
         ),
         'Composer\\Installers\\' => 
         array (
