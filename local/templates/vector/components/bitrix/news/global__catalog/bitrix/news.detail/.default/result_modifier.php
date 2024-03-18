@@ -71,4 +71,23 @@ if($props_vr) {
 	}*/
 	$arResult['PROPS_VR'] = $props_vr;
 }
+$height_input_min = [
+	'mobile'     => 150,
+	'md-mobile'  => 150,
+	'lg-mobile'  => 150,
+	'xl-mobile'  => 170,
+	'tablet'     => 170,
+	'md-tablet'  => 190,
+	'lg-tablet'  => 190,
+	'xl-tablet'  => 220,
+	'desktop'    => 220,
+	'md-desktop' => 250,
+	'lg-desktop' => 250,
+	'xl-desktop' => 300,
+];
+foreach ($arResult['PROPERTIES']['GALLERY']['VALUE'] as $key => $id) {
+	$picture = CFile::GetFileArray($id);
+	$picture['WIDTH'] = 150;
+	$arResult['GALLERY'][$id] = make_picture_min($picture, $height_input_min);
+}
 ?>

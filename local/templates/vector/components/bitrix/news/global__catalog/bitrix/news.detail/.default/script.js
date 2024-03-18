@@ -37,3 +37,6 @@ function updateWeightRow(container, row, diameterIndex) {
 	output = container.find('.prop__block[data-input="' + weightSelector + '"]').find('[data-index="' + diameterIndex + '"]').text();
 	return output;
 }
+$(document).ready(function(){
+	$('.owl-carousel').owlCarousel();
+});
