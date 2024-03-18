@@ -12,6 +12,8 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 use Bitrix\Main\Page\Asset;
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/libraries/owl.carousel/owl.carousel.min.js');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/libraries/owl.carousel/assets/owl.carousel.min.css');
 ?>
 <section class="product">
 	<div class="container">
@@ -224,4 +226,22 @@ if($arResult['PROPS_VR']) {
 			</div>
 		</div>
 	</div>
+<?if($arResult['GALLERY']) {?>
+	<div class="catalog__gallery owl-carousel">
+	<?foreach ($arResult['GALLERY'] as $key => $picture) {
+		$max = CFile::GetFileArray($key);?>
+		<picture class="gallery__item" data-max="<?=$max['SRC']?>">
+		<?foreach ($picture as $keyMedia => $valueMedia) {
+			if($keyMedia !== 'default') {
+				$explode = explode('-', $keyMedia);
+				$start = $explode[0];
+				$end = $explode[1];?>
+			<source srcset="<?=$picture[$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
+			<?}
+		}?>
+			<img srcset="<?=$picture['default']?>" alt="<?=$arResult['NAME']?>, основное фото анонса" />
+		</picture>
+	<?}?>
+	</div>
+<?}?>
 </section>
