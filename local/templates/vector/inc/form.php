@@ -15,9 +15,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
-require 'phpmailer/src/SMTP.php';
+require '../phpmailer/src/Exception.php';
+require '../phpmailer/src/PHPMailer.php';
+require '../phpmailer/src/SMTP.php';
 
 
 /*-------------------------------------------------
@@ -27,7 +27,8 @@ require 'phpmailer/src/SMTP.php';
 $toemails = array();
 
 $toemails[] = array(
-				'email' => 'a.kolesnik@vector-tepla.ru', // Your Email Address
+				'email' => 'admin@professional161.ru', // Your Email Address
+				//'email' => 'a.kolesnik@vector-tepla.ru', // Your Email Address
 				'name' => 'Заявка с сайта vector-tepla.ru' // Your Name
 			);
 
