@@ -51,7 +51,9 @@ header {
           header .header__menu.max-width__menu li a {
             padding: 14px 22px;
             font-weight: 600;
-            font-size: 1.1rem; }
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 2; }
             header .header__menu.max-width__menu li a.selected {
               color: #ca4e5d; }
               header .header__menu.max-width__menu li a.selected:hover {
@@ -59,6 +61,7 @@ header {
           header .header__menu.max-width__menu li .submenu {
             opacity: 0;
             position: absolute;
+            z-index: 1;
             top: 48px;
             left: 0;
             padding: 0;
