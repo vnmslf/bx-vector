@@ -58,6 +58,14 @@ $APPLICATION->SetTitle('Дымоходные системы');
 	'',
 	Array(
 		'AREA_FILE_SHOW' => 'file',
+		'PATH' => SITE_TEMPLATE_PATH.'/inc/order.php',
+	)
+);?>
+<?$APPLICATION->IncludeComponent(
+	'bitrix:main.include',
+	'',
+	Array(
+		'AREA_FILE_SHOW' => 'file',
 		'PATH' => SITE_TEMPLATE_PATH.'/inc/caption.php',
 		'CAPTION' => 'Каталог продукции'
 	)
@@ -93,7 +101,7 @@ $APPLICATION->SetTitle('Дымоходные системы');
 		'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
 		'INCLUDE_SUBSECTIONS' => 'Y',
 		'MESSAGE_404' => '',
-		'NEWS_COUNT' => '8',
+		'NEWS_COUNT' => '12',
 		'PAGER_BASE_LINK_ENABLE' => 'N',
 		'PAGER_DESC_NUMBERING' => 'N',
 		'PAGER_DESC_NUMBERING_CACHE_TIME' => '36000',
