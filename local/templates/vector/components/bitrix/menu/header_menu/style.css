@@ -95,7 +95,7 @@ header {
             header .header__menu.max-width__menu li.hasChild:hover > .submenu .hasChild {
               position: relative; }
               header .header__menu.max-width__menu li.hasChild:hover > .submenu .hasChild .submenu {
-                top: 50%;
+                top: 32px;
                 left: 74px;
                 -webkit-transform: translateY(-50%);
                 transform: translateY(-50%); }
