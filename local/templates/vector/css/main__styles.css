@@ -297,17 +297,23 @@ pre {
 .prenav {
   position: relative;
   z-index: 20;
-  background: #ca4e5d;
-  padding: 4px 0; }
+  background: #ca4e5d; }
   .prenav .container {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px; }
     .prenav .container a {
       color: #fff;
       text-decoration: none; }
       .prenav .container a:hover {
         color: #000; }
+  @media (max-width: 423.98px) {
+    .prenav {
+      padding: 4px 0; }
+      .prenav .container a {
+        font-size: 14px; } }
 
 /*=================================================================*/
 /*                      NAVBAR
