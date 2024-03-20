@@ -318,16 +318,27 @@ pre {
 	position: relative;
 	z-index: 20;
 	background: $red;
-	padding: 4px 0;
 	.container {
 		-webkit-box-pack: justify;
 		    -ms-flex-pack: justify;
 		        justify-content: space-between;
+		padding-left: 5px;
+		padding-right: 5px;
 		a {
 			color: $white;
 			text-decoration: none;
 			&:hover {
 				color: $black;
+			}
+		}
+	}
+	@include media-down(smallest) {
+		padding: 4px 0;
+		.container {
+			a {
+				font-size: 14px;
+				&:hover {
+				}
 			}
 		}
 	}
