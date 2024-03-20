@@ -70,9 +70,16 @@ section.product .container {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         gap: 1px; }
+        section.product .container .product__right .prop__block .prop__line .prop__container a,
         section.product .container .product__right .prop__block .prop__line .prop__container span {
           width: 50px;
-          text-align: center; }
+          text-align: center;
+          text-decoration: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none; }
+          section.product .container .product__right .prop__block .prop__line .prop__container a.active,
           section.product .container .product__right .prop__block .prop__line .prop__container span.active {
             display: inline-block;
             border-radius: 6px;
@@ -93,17 +100,21 @@ section.product .container {
             border-radius: 4px;
             font-size: 13px;
             padding: 6px 12px; }
+            section.product .container .product__right .prop__block .prop__line .prop__container a.active:hover,
+            section.product .container .product__right .prop__block .prop__line .prop__container a.active .active,
             section.product .container .product__right .prop__block .prop__line .prop__container span.active:hover,
             section.product .container .product__right .prop__block .prop__line .prop__container span.active .active {
               /*@include btn();*/
               background-color: #fff;
               border-color: #ca4e5d;
               color: #ca4e5d; }
+            section.product .container .product__right .prop__block .prop__line .prop__container a.active:hover,
             section.product .container .product__right .prop__block .prop__line .prop__container span.active:hover {
               /*@include btn();*/
               background-color: #ca4e5d;
               border-color: #ca4e5d;
               color: #fff; }
+          section.product .container .product__right .prop__block .prop__line .prop__container a:not(.active),
           section.product .container .product__right .prop__block .prop__line .prop__container span:not(.active) {
             display: inline-block;
             border-radius: 6px;
@@ -125,12 +136,15 @@ section.product .container {
             font-size: 13px;
             padding: 6px 12px;
             color: #000; }
+            section.product .container .product__right .prop__block .prop__line .prop__container a:not(.active):hover,
+            section.product .container .product__right .prop__block .prop__line .prop__container a:not(.active) .active,
             section.product .container .product__right .prop__block .prop__line .prop__container span:not(.active):hover,
             section.product .container .product__right .prop__block .prop__line .prop__container span:not(.active) .active {
               /*@include btn();*/
               background-color: #ca4e5d;
               border-color: #ca4e5d;
               color: #fff; }
+    section.product .container .product__right .prop__block.width__unset .prop__line .prop__container a,
     section.product .container .product__right .prop__block.width__unset .prop__line .prop__container span {
       width: auto; }
     section.product .container .product__right .technical {
@@ -230,10 +244,13 @@ section.product .container {
     font-size: 14px;
     line-height: 18px; } }
 @media (min-width: 600px) {
+  section.product .container .product__right .prop__block .prop__line .prop__container a,
   section.product .container .product__right .prop__block .prop__line .prop__container span {
     width: 55px; }
+    section.product .container .product__right .prop__block .prop__line .prop__container a.active,
     section.product .container .product__right .prop__block .prop__line .prop__container span.active {
       font-size: 14px; }
+    section.product .container .product__right .prop__block .prop__line .prop__container a:not(.active),
     section.product .container .product__right .prop__block .prop__line .prop__container span:not(.active) {
       font-size: 14px; } }
 @media (min-width: 768px) {
@@ -257,10 +274,13 @@ section.product .container {
       font-size: 18px; }
       section.product .container .product__right .prop__block .prop__line {
         gap: 6px; }
+        section.product .container .product__right .prop__block .prop__line .prop__container a,
         section.product .container .product__right .prop__block .prop__line .prop__container span {
           width: 54px; }
+          section.product .container .product__right .prop__block .prop__line .prop__container a.active,
           section.product .container .product__right .prop__block .prop__line .prop__container span.active {
             font-size: 15px; }
+          section.product .container .product__right .prop__block .prop__line .prop__container a:not(.active),
           section.product .container .product__right .prop__block .prop__line .prop__container span:not(.active) {
             font-size: 15px; }
     section.product .container .product__technical {
@@ -295,6 +315,7 @@ section.product .container {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 calc(60% - 11px);
     flex: 0 0 calc(60% - 11px); }
+    section.product .container .product__right .prop__block .prop__line .prop__container a,
     section.product .container .product__right .prop__block .prop__line .prop__container span {
       width: 59px; } }
 @media (min-width: 1280px) {
@@ -306,6 +327,7 @@ section.product .container {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 calc(100% - 466px);
     flex: 0 0 calc(100% - 466px); }
+    section.product .container .product__right .prop__block .prop__line .prop__container a,
     section.product .container .product__right .prop__block .prop__line .prop__container span {
       width: 57px; }
   section.product .container .catalog__gallery .owl-nav button {
