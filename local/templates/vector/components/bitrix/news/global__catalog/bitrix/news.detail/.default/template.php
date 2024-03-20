@@ -100,8 +100,13 @@ if($arResult['PROPS_VR']) {
 					<div class="prop__container">
 		<?$i = 0;
 		foreach ($props['COLOR'] as $key => $value) {?>
-						<span class="prop__button<?=($i == 0 ? ' active' : '')?>" data-value="<?=$value?>" data-index="<?=$i?>"><?=$value?></span>
-			<?$i++;
+			<?if($value['LINK'] == $props['NOW_URL']) {
+				$active_color = $i;?>
+						<span class="prop__button active" data-value="<?=$value['NAME']?>" data-index="<?=$i?>"><?=$value['NAME']?></span>
+			<?} else {?>
+						<a href="<?=$value['LINK']?>" class="prop__button" data-value="<?=$value['NAME']?>" data-index="<?=$i?>"><?=$value['NAME']?></a>
+			<?}
+			$i++;
 		}?>
 					</div>
 				</div>
@@ -190,7 +195,7 @@ if($arResult['PROPS_VR']) {
 <?if($arResult['PROPS_VR']['COLOR']) {?>
 				<div class="product__row">
 					<div class="product__col product__name">Цвет:</div>
-					<div class="product__col product__value" data-output="color"><?=$arResult['PROPS_VR']['COLOR'][0]?></div>
+					<div class="product__col product__value" data-output="color"><?=$arResult['PROPS_VR']['COLOR'][$active_color]['NAME']?></div>
 				</div>
 <?}?>
 <?if($arResult['PROPS_VR']['WIDTH']) {?>

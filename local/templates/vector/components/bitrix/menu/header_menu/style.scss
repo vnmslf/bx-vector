@@ -68,7 +68,8 @@ header {
 						top: 48px;
 						left: 0;
 						padding: 0;
-						background: rgba($white, .3);
+						background: rgba($white, .8);
+						@include default-shadow($black);
 						border: 1px solid $white;
 						-webkit-transform: translateY(-250%);
 						        transform: translateY(-250%);
@@ -128,14 +129,17 @@ header {
 			& > .hasChild {
 				& > .submenu {
 					li {
+						&:first-child {
+							margin-top: 10px;
+						}
 						&:last-child {
 							margin-bottom: 10px;
 						}
 						&.hasChild {
 							.submenu {
 								li {
+									&:first-child,
 									&:last-child {
-										margin: 0;
 									}
 								}
 							}
