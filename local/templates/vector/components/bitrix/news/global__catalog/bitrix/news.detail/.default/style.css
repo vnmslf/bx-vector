@@ -12,6 +12,9 @@
 /* flex mixes*/
 /* default transitions */
 /* shadows */
+#preloader {
+  display: none; }
+
 section.product .container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
