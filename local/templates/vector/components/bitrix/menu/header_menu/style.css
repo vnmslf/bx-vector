@@ -43,7 +43,10 @@ header {
         gap: 0px;
         padding: 0;
         margin: 0;
-        position: relative; }
+        position: relative;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2; }
         header .header__menu.max-width__menu .floor__icon {
           width: 25px; }
         header .header__menu.max-width__menu li {

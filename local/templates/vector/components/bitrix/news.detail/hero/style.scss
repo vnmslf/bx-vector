@@ -385,6 +385,7 @@ section.hero {
 	@include media-up(xxlarge) {
 		.container {
 			.hero__left {
+				padding: 0 30px;
 				.hero__precapt {
 				}
 				h1 {

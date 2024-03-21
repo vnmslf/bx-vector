@@ -61,6 +61,11 @@ $APPLICATION->SetTitle('Дымоходные системы');
 		'PATH' => SITE_TEMPLATE_PATH.'/inc/order.php',
 		'PREFIX' => 'start__cta',
 		'BG_COLOR' => 'red',
+		'BUTTON_COLOR' => 'white',
+		'TYPE_CONTENT' => 'section',
+		'BUTTON_COLOR' => '',
+		'BUTTON_TEXT' => 'Обсудить проект',
+		'MODAL_BUTTON_TEXT' => 'Обсудить проект',
 	)
 );?>
 <?$APPLICATION->IncludeComponent(

@@ -2,42 +2,18 @@
 use Bitrix\Main\UI\Extension;
 use Bitrix\Main\Page\Asset;
 Extension::load('ui.bootstrap4');
-/*CJSCore::RegisterExt(
-	'jquery3',
-	array(
-		'js' => SITE_TEMPLATE_PATH.'/js/jquery-3.5.1.min.js',
-		'rel' => array('jquery'),
-		'skip_core' => true
-	)
-);*/
 CJSCore::Init(array('jquery'));
-/*CJSCore::RegisterExt(
-	'jquery_fix',
-	array(
-		'js' => SITE_TEMPLATE_PATH.'/js/jquery-migrate-3.0.0.min.js',
-		'rel' => array('jquery'),
-		'skip_core' => true
-	)
-);
-CJSCore::Init(array('jquery_fix'));*/
-//Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/script.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/imagesloaded.pkgd.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/infinite-scroll.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/masonry.pkgd.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/slick.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/jquery.stellar.min.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/main.min.js');
-//Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/custom.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/all.min.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/slick.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/ionicons.min.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/main__styles.min.css');
-IncludeTemplateLangFile(__FILE__);?>
+IncludeTemplateLangFile(__FILE__);
+$now_url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http').'://'.$_SERVER['HTTP_HOST'].'/';?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 <head>
 	<meta charset="utf-8">
-	<link rel="alternate" hreflang="x-default" href="https://foxplay-rnd.ru/" />
+	<link rel="alternate" hreflang="x-default" href="<?=$now_url?>" />
 	<?$APPLICATION->ShowHead();?>
 	<link rel="apple-touch-icon" sizes="57x57" href="<?=SITE_TEMPLATE_PATH?>/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="<?=SITE_TEMPLATE_PATH?>/favicon/apple-icon-60x60.png">
@@ -181,6 +157,21 @@ IncludeTemplateLangFile(__FILE__);?>
 					<a class="navbar-brand" href="/">
 						<img src="<?=SITE_TEMPLATE_PATH?>/images/logo.svg" alt="Вектор тепла, логотип в шапке" />
 					</a>
+<?$APPLICATION->IncludeComponent(
+	'bitrix:main.include',
+	'',
+	Array(
+		'AREA_FILE_SHOW' => 'file',
+		'PATH' => SITE_TEMPLATE_PATH.'/inc/order.php',
+		'PREFIX' => 'header__cta',
+		'BG_COLOR' => '',
+		'BUTTON_COLOR' => 'red',
+		'TYPE_CONTENT' => 'div',
+		'BUTTON_COLOR' => 'red',
+		'BUTTON_TEXT' => 'Задать вопрос',
+		'MODAL_BUTTON_TEXT' => 'Задать вопрос',
+	)
+);?>
 					<?$APPLICATION->IncludeComponent(
 						'bitrix:menu',
 						'header_menu',
