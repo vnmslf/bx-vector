@@ -2,7 +2,7 @@
 
 namespace Sprint\Migration;
 
-class MAR21_120240321085024 extends Version
+class MAR21_2_20240321085312 extends Version
 {
     protected $description   = "";
     protected $moduleVersion = "4.6.2";
@@ -21,7 +21,7 @@ class MAR21_120240321085024 extends Version
              ->execute(function ($item) {
                  $this->getHelperManager()
                       ->Iblock()
-                      ->saveElement(
+                      ->saveElementByXmlId(
                           $item['iblock_id'],
                           $item['fields'],
                           $item['properties']
@@ -42,11 +42,11 @@ class MAR21_120240321085024 extends Version
              ->setLimit(10)
              ->execute(function ($item) {
                  $this->getHelperManager()
-                      ->Iblock()
-                      ->deleteElementByCode(
-                          $item['iblock_id'],
-                          $item['fields']['CODE']
-                 );
+                     ->Iblock()
+                     ->deleteElementByXmlId(
+                         $item['iblock_id'],
+                         $item['fields']['XML_ID']
+                     );
              });
     }
 }
