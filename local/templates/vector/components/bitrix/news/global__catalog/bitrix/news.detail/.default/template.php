@@ -88,7 +88,6 @@ if($arResult['PROPS_ME']) {
 			<?$i++;
 		}?>
 			</div>
-		</div>
 	<?}
 }?>
 <?// свойства для вентялиционных решеток
@@ -165,6 +164,7 @@ if($arResult['PROPS_VR']) {
 			</div>
 	<?}
 }?>
+		</div>
 		<div class="product__technical">
 			<h2>Технические характеристики</h2>
 			<div class="product__table">
@@ -232,21 +232,23 @@ if($arResult['PROPS_VR']) {
 		</div>
 	</div>
 <?if($arResult['GALLERY']) {?>
-	<div class="catalog__gallery owl-carousel">
+	<div class="container">
+		<div class="catalog__gallery owl-carousel">
 	<?foreach ($arResult['GALLERY'] as $key => $picture) {
 		$max = CFile::GetFileArray($key);?>
-		<picture class="gallery__item" data-max="<?=$max['SRC']?>">
+			<picture class="gallery__item" data-max="<?=$max['SRC']?>">
 		<?foreach ($picture as $keyMedia => $valueMedia) {
 			if($keyMedia !== 'default') {
 				$explode = explode('-', $keyMedia);
 				$start = $explode[0];
 				$end = $explode[1];?>
-			<source srcset="<?=$picture[$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
+				<source srcset="<?=$picture[$keyMedia]['src']?>" media="(min-width: <?=$start?>px)<?if($end !== 'max') {?> and (max-width: <?=$end?>px)<?}?>" type="image/webp" />
 			<?}
 		}?>
-			<img srcset="<?=$picture['default']?>" alt="<?=$arResult['NAME']?>, основное фото анонса" />
-		</picture>
+				<img srcset="<?=$picture['default']?>" alt="<?=$arResult['NAME']?>, основное фото анонса" />
+			</picture>
 	<?}?>
+		</div>
 	</div>
 <?}?>
 </section>
