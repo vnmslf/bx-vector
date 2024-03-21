@@ -45,46 +45,46 @@ if($props_me) {
 		$arResult['DEFAULT_ARTICLE'] = $default__article;
 	}
 	$arResult['PROPS_ME'] = $props_me;
-}
-
-$hlblock__name = $arResult['PROPERTIES']['PROPS_VR']['USER_TYPE_SETTINGS']['TABLE_NAME'];
-$hlblock = \Bitrix\Highloadblock\HighloadBlockTable::getList(array('filter' => array('=TABLE_NAME' => $hlblock__name)))->fetch();
-$entity = \Bitrix\Highloadblock\HighloadBlockTable::compileEntity($hlblock);
-$entity_data_class = $entity->getDataClass();
-$res = $entity_data_class::getList(array(
-	'select' => array('ID', 'UF_COLOR', 'UF_WIDTH', 'UF_WIDTH_TWO', 'UF_HEIGHT', 'UF_DEPTH', 'UF_WEIGHT', 'UF_ELEMENTS'),
-));
-if ($item = $res->Fetch()) {
-	$props_vr['COLOR'] = $item['UF_COLOR'];
-	$props_vr['WIDTH'] = array_unique($item['UF_WIDTH']);
-	$props_vr['WIDTH_TWO'] = array_unique($item['UF_WIDTH_TWO']);
-	$props_vr['HEIGHT'] = array_unique($item['UF_HEIGHT']);
-	$props_vr['DEPTH'] = array_unique($item['UF_DEPTH']);
-	$props_vr['WEIGHT'] = $item['UF_WEIGHT'];
-	$props_vr['ELEMENTS'] = $item['UF_ELEMENTS'];
-}
-if($props_vr) {
-	/*if($props['ARTICLE']) {
-		$default__article = str_replace('{D}', $props_vr['DIAMETER'][0], $props_vr['ARTICLE']);
-		$default__article = str_replace('{W}', ((str_replace(',', '.', $props_vr['WEIGHT'][0])) * 10), $default__article);
-		$arResult['DEFAULT_ARTICLE'] = $default__article;
-	}*/
-	$iblock_code = \Dao\App::ib('catalog')->code();
-	$now_url = $_SERVER['REQUEST_URI'];
-	$now_url = explode('?', $now_url);
-	$now_url = $now_url[0];
-	foreach ($props_vr['ELEMENTS'] as $key => $value) {
-		$element = \Bitrix\Iblock\Elements\ElementCatalogTable::getByPrimary($value, [
-			'select' => ['ID', 'IBLOCK_ID', 'IBLOCK_SECTION_ID', 'CODE', 'NAME', 'COLOR_' => 'COLOR', 'DETAIL_PAGE_URL' => 'IBLOCK.DETAIL_PAGE_URL'],
-		])->fetch();
-		$colors[] = [
-			'NAME' => $element['COLOR_VALUE'],
-			'LINK' => '/'.$iblock_code.CIBlock::ReplaceDetailUrl($element['DETAIL_PAGE_URL'], $element, false, 'E'),
-		];
+} else {
+	$hlblock__name = $arResult['PROPERTIES']['PROPS_VR']['USER_TYPE_SETTINGS']['TABLE_NAME'];
+	$hlblock = \Bitrix\Highloadblock\HighloadBlockTable::getList(array('filter' => array('=TABLE_NAME' => $hlblock__name)))->fetch();
+	$entity = \Bitrix\Highloadblock\HighloadBlockTable::compileEntity($hlblock);
+	$entity_data_class = $entity->getDataClass();
+	$res = $entity_data_class::getList(array(
+		'select' => array('ID', 'UF_COLOR', 'UF_WIDTH', 'UF_WIDTH_TWO', 'UF_HEIGHT', 'UF_DEPTH', 'UF_WEIGHT', 'UF_ELEMENTS'),
+	));
+	if ($item = $res->Fetch()) {
+		$props_vr['COLOR'] = $item['UF_COLOR'];
+		$props_vr['WIDTH'] = array_unique($item['UF_WIDTH']);
+		$props_vr['WIDTH_TWO'] = array_unique($item['UF_WIDTH_TWO']);
+		$props_vr['HEIGHT'] = array_unique($item['UF_HEIGHT']);
+		$props_vr['DEPTH'] = array_unique($item['UF_DEPTH']);
+		$props_vr['WEIGHT'] = $item['UF_WEIGHT'];
+		$props_vr['ELEMENTS'] = $item['UF_ELEMENTS'];
 	}
-	$props_vr['COLOR'] = $colors;
-	$props_vr['NOW_URL'] = $now_url;
-	$arResult['PROPS_VR'] = $props_vr;
+	if($props_vr) {
+		/*if($props['ARTICLE']) {
+			$default__article = str_replace('{D}', $props_vr['DIAMETER'][0], $props_vr['ARTICLE']);
+			$default__article = str_replace('{W}', ((str_replace(',', '.', $props_vr['WEIGHT'][0])) * 10), $default__article);
+			$arResult['DEFAULT_ARTICLE'] = $default__article;
+		}*/
+		$iblock_code = \Dao\App::ib('catalog')->code();
+		$now_url = $_SERVER['REQUEST_URI'];
+		$now_url = explode('?', $now_url);
+		$now_url = $now_url[0];
+		foreach ($props_vr['ELEMENTS'] as $key => $value) {
+			$element = \Bitrix\Iblock\Elements\ElementCatalogTable::getByPrimary($value, [
+				'select' => ['ID', 'IBLOCK_ID', 'IBLOCK_SECTION_ID', 'CODE', 'NAME', 'COLOR_' => 'COLOR', 'DETAIL_PAGE_URL' => 'IBLOCK.DETAIL_PAGE_URL'],
+			])->fetch();
+			$colors[] = [
+				'NAME' => $element['COLOR_VALUE'],
+				'LINK' => '/'.$iblock_code.CIBlock::ReplaceDetailUrl($element['DETAIL_PAGE_URL'], $element, false, 'E'),
+			];
+		}
+		$props_vr['COLOR'] = $colors;
+		$props_vr['NOW_URL'] = $now_url;
+		$arResult['PROPS_VR'] = $props_vr;
+	}
 }
 $height_input_min = [
 	'mobile'     => 150,
