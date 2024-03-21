@@ -1,5 +1,5 @@
 $('body').on('click', '[data-order]', function() {
-	var modal = $('.modal__order');
+	var modal = $('.' + $(this).attr('data-order'));
 	modal.addClass('opened');
 })
 $('body').on('click', '[data-exit]', function() {

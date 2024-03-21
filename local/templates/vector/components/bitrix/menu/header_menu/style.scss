@@ -43,6 +43,9 @@ header {
 				padding: 0;
 				margin: 0;
 				position: relative;
+				-webkit-box-ordinal-group: 3;
+				    -ms-flex-order: 2;
+				        order: 2;
 				.floor__icon {
 					width: 25px;
 				}

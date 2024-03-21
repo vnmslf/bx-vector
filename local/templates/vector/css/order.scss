@@ -1,6 +1,13 @@
 @import "./../scss/style";
-section.order {
-	padding: 40px 0;
+.order {
+	-webkit-box-ordinal-group: 0;
+	    -ms-flex-order: 3;
+	        order: 3;
+	& + .header__menu {
+		&.max-width__menu {
+			margin-left: auto;
+		}
+	}
 	&.red {
 		background: $red;
 	}
@@ -26,16 +33,18 @@ section.order {
 			width: 100%;
 			color: $white;
 			text-align: center;
-			.left {
-			}
-			.right {
+			.actions__block {
 				.button {
 					@include default-btn($white);
 					color: $black;
-					padding: 1.1em 2.3em;
+					padding: .7em 1.3em;
+					font-size: 14px;
 					text-transform: uppercase;
 					font-weight: 700;
 					border-radius: 2.3em;
+					&.red {
+						@include btn-color-default($red);
+					}
 					&:hover {
 						background-color: $black;
 						border-color: $red;
@@ -137,6 +146,51 @@ section.order {
 								color: $white;
 								background-color: $black;
 								border-color: $red;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+section.order {
+	padding: 40px 0;
+	&.red {
+	}
+	&.black {
+	}
+	&.white {
+	}
+	.container {
+		.order__block {
+			.actions__block {
+				.button {
+					padding: 1.1em 2.3em;
+					font-size: 18px;
+					&:hover {
+					}
+				}
+			}
+		}
+	}
+	.modal__order {
+		.modal__close {
+		}
+		.modal__form {
+			form {
+				.form-section {
+					.form-group {
+						label {
+						}
+						input {
+						}
+					}
+					.d-none {
+					}
+					.form-submit {
+						button {
+							&:hover {
 							}
 						}
 					}

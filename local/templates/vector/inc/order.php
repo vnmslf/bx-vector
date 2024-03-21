@@ -4,18 +4,20 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/order.min.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/jquery.maskedinput.min.js');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/modal.min.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/order.min.css');
-$prefix = $arParams['PREFIX'];?>
-<section class="order<?if($arParams['BG_COLOR']) {?> <?=$arParams['BG_COLOR']?><?}?>">
+$prefix = $arParams['PREFIX'];
+$tag = $arParams['TYPE_CONTENT'];
+$button_color = ($arParams['BUTTON_COLOR'] !== '' ? ' '.$arParams['BUTTON_COLOR'] : '');
+$button_text = $arParams['BUTTON_TEXT'];
+$modal_button_text = $arParams['MODAL_BUTTON_TEXT'];?>
+<<?=$tag?> class="order<?if($arParams['BG_COLOR']) {?> <?=$arParams['BG_COLOR']?><?}?>">
 	<div class="container">
 		<div class="order__block">
-			<?/*<div class="left">
-			</div>*/?>
-			<div class="right">
-				<span class="button" data-order="<?=$prefix?>-order">Обсудить проект</span>
+			<div class="actions__block">
+				<span class="button<?=$button_color?>" data-order="<?=$prefix?>-order"><?=$button_text?></span>
 			</div>
 		</div>
 	</div>
-	<div class="modal modal__order">
+	<div class="modal modal__order <?=$prefix?>-order">
 		<div class="modal__close" data-exit="true">
 			<i class="fas fa-times"></i>
 		</div>
@@ -38,7 +40,7 @@ $prefix = $arParams['PREFIX'];?>
 						<input type="text" id="<?=$prefix?>-botcheck" name="<?=$prefix?>-botcheck" value="">
 					</div>
 					<div class="form-submit">
-						<button type="submit" name="<?=$prefix?>-submit">Обсудить проект</button>
+						<button type="submit" name="<?=$prefix?>-submit"><?=$modal_button_text?></button>
 					</div>
 					<input type="hidden" name="prefix" value="<?=$prefix?>-">
 					<input type="hidden" name="autoresponder" value="true">
@@ -46,4 +48,4 @@ $prefix = $arParams['PREFIX'];?>
 			</form>
 		</div>
 	</div>
-</section>
+</<?=$tag?>>

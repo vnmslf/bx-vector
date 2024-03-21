@@ -173,9 +173,9 @@ section.hero {
         -webkit-transform: translateX(-25%);
         transform: translateX(-25%); } }
   @media (min-width: 1440px) {
-    section.hero .container .hero__left .hero__props .prop {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(50% - 6px);
-      flex: 0 0 calc(50% - 6px); } }
-
-/*# sourceMappingURL=style.css.map */
+    section.hero .container .hero__left {
+      padding: 0 30px; }
+      section.hero .container .hero__left .hero__props .prop {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 6px);
+        flex: 0 0 calc(50% - 6px); } }
