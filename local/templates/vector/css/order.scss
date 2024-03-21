@@ -36,6 +36,10 @@ section.order {
 					text-transform: uppercase;
 					font-weight: 700;
 					border-radius: 2.3em;
+					&:hover {
+						background-color: $black;
+						border-color: $red;
+					}
 				}
 			}
 		}
@@ -127,7 +131,13 @@ section.order {
 							@include default-btn($red);
 							font-weight: 700;
 							padding: 1.1em 2.3em;
+							border-radius: 2.3em;
 							text-transform: uppercase;
+							&:hover {
+								color: $white;
+								background-color: $black;
+								border-color: $red;
+							}
 						}
 					}
 				}

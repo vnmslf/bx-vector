@@ -63,6 +63,9 @@ section.order {
         background-color: #fff;
         border-color: #fff;
         color: #fff; }
+      section.order .container .order__block .right .button:hover {
+        background-color: #000;
+        border-color: #ca4e5d; }
   section.order .modal__order {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -157,6 +160,7 @@ section.order {
             color: #fff;
             font-weight: 700;
             padding: 1.1em 2.3em;
+            border-radius: 2.3em;
             text-transform: uppercase; }
             section.order .modal__order .modal__form form .form-section .form-submit button:hover,
             section.order .modal__order .modal__form form .form-section .form-submit button .active {
@@ -164,3 +168,7 @@ section.order {
               background-color: #fff;
               border-color: #ca4e5d;
               color: #ca4e5d; }
+            section.order .modal__order .modal__form form .form-section .form-submit button:hover {
+              color: #fff;
+              background-color: #000;
+              border-color: #ca4e5d; }
