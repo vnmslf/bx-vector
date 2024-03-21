@@ -20,7 +20,7 @@ $prefix = $arParams['PREFIX'];?>
 			<i class="fas fa-times"></i>
 		</div>
 		<div class="modal__form">
-			<form name="<<?=$prefix?>-main" class="class" action="<?=SITE_TEMPLATE_PATH?>/inc/form.php" method="post" enctype="multipart/form-data">
+			<form name="<?=$prefix?>-main" class="class" action="<?=SITE_TEMPLATE_PATH?>/inc/form.php" method="post" enctype="multipart/form-data">
 				<div class="form-section">
 					<div class="form-group">
 						<label>Ваше имя:</label>
@@ -28,17 +28,17 @@ $prefix = $arParams['PREFIX'];?>
 					</div>
 					<div class="form-group">
 						<label>E-mail:</label>
-						<input type="email" name="<?=$prefix?>-email" id="<<?=$prefix?>-email" class="form-control form-control-lg required" value="" placeholder="e-mail@domain.ru" />
+						<input type="email" name="<?=$prefix?>-email" id="<?=$prefix?>-email" class="form-control form-control-lg required" value="" placeholder="e-mail@domain.ru" />
 					</div>
 					<div class="form-group">
 						<label>Контактный телефон:</label>
-						<input type="tel" name="<<?=$prefix?>-phone" id="<<?=$prefix?>-phone" class="masked__phone form-control form-control-lg required" value="" placeholder="+7 (999) 999-99-99" maxlength="12" />
+						<input type="tel" name="<?=$prefix?>-phone" id="<?=$prefix?>-phone" class="masked__phone form-control form-control-lg required" value="" placeholder="+7 (999) 999-99-99" maxlength="12" />
 					</div>
 					<div class="d-none">
-						<input type="text" id="<<?=$prefix?>-botcheck" name="<<?=$prefix?>-botcheck" value="">
+						<input type="text" id="<?=$prefix?>-botcheck" name="<?=$prefix?>-botcheck" value="">
 					</div>
 					<div class="form-submit">
-						<button type="submit" name="<<?=$prefix?>-submit">Обсудить проект</button>
+						<button type="submit" name="<?=$prefix?>-submit">Обсудить проект</button>
 					</div>
 					<input type="hidden" name="prefix" value="<?=$prefix?>-">
 					<input type="hidden" name="autoresponder" value="true">
