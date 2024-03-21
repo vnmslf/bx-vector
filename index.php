@@ -59,6 +59,8 @@ $APPLICATION->SetTitle('Дымоходные системы');
 	Array(
 		'AREA_FILE_SHOW' => 'file',
 		'PATH' => SITE_TEMPLATE_PATH.'/inc/order.php',
+		'PREFIX' => 'start__cta',
+		'BG_COLOR' => 'red',
 	)
 );?>
 <?$APPLICATION->IncludeComponent(
