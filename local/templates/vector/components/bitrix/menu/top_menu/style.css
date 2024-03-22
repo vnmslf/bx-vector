@@ -25,7 +25,10 @@
   padding-left: 10px;
   position: relative;
   margin-left: -12.5px;
-  width: 25px; }
+  width: 25px;
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3; }
   .menu-icon span {
     display: block;
     background: rgba(0, 0, 0, 0.9);
