@@ -54,7 +54,7 @@ header {
 					a {
 						padding: 14px 22px;
 						font-weight: 600;
-						font-size: 1.1rem;
+						font-size: 0.9rem;
 						position: relative;
 						z-index: 2;
 						&.selected {
@@ -126,6 +126,54 @@ header {
 								}
 							}
 						}
+					}
+				}
+			}
+			@include media-up(xlarge) {
+				.floor__icon {
+				}
+				li {
+					a {
+						font-size: 1.1rem;
+						&.selected {
+							&:hover {
+							}
+						}
+					}
+					.submenu {
+						li {
+							a {
+							}
+						}
+					}
+					&.hasChild {
+						i {
+						}
+						.fa-minus-square {
+						}
+						&:hover {
+							.fa-plus-square {
+							}
+							.fa-minus-square {
+							}
+							& > .submenu {
+								.hasChild {
+									.submenu {
+									}
+									&:hover {
+										.submenu {
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			@media (max-width: 1200px) {
+				li {
+					a {
+						font-size: 0.8rem;
 					}
 				}
 			}

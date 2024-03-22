@@ -16,6 +16,9 @@
 	position: relative;
 	margin-left: -12.5px;
 	width: 25px;
+	-webkit-box-ordinal-group: 4;
+	    -ms-flex-order: 3;
+	        order: 3;
 	span {
 		display: block;
 		background: $black_01;
