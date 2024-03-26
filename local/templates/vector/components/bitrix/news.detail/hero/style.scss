@@ -330,6 +330,10 @@ section.hero {
 	}
 	@include media-up(xmedium) {
 		.container {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: row;
+			        flex-direction: row;
 			.hero__left {
 				margin: 0;
 				padding: 0;
