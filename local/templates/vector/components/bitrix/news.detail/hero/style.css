@@ -218,32 +218,37 @@ section.hero {
     section.hero .container .hero__right {
       left: 55%; } }
   @media (min-width: 992px) {
-    section.hero .container .hero__left {
-      margin: 0;
-      padding: 0;
-      background: none;
-      border: none;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
-      -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center; }
-      section.hero .container .hero__left .hero__props {
-        -ms-flex-pack: distribute;
-        justify-content: space-around; }
-    section.hero .container .hero__right {
-      position: relative;
-      width: 464px;
-      height: auto;
-      max-height: 700px;
-      left: unset;
-      top: unset;
-      -webkit-transform: unset;
-      transform: unset;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%; } }
+    section.hero .container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      section.hero .container .hero__left {
+        margin: 0;
+        padding: 0;
+        background: none;
+        border: none;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center; }
+        section.hero .container .hero__left .hero__props {
+          -ms-flex-pack: distribute;
+          justify-content: space-around; }
+      section.hero .container .hero__right {
+        position: relative;
+        width: 464px;
+        height: auto;
+        max-height: 700px;
+        left: unset;
+        top: unset;
+        -webkit-transform: unset;
+        transform: unset;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%; } }
   @media (min-width: 1280px) {
     section.hero .container .hero__left {
       background: #fff; }
